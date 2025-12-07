@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_location_tracker/gps_home_screen.dart';
 import 'package:google_maps_location_tracker/home_screen.dart';
+import 'package:google_maps_location_tracker/location_tracking_screen.dart';
+import 'package:google_maps_location_tracker/user_location_screen.dart';
+import 'package:google_maps_location_tracker/user_tracking_screen.dart';
 
 void main() {
-  runApp(LocationTracerApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(LocationTrackerApp());
 }
 
-class LocationTracerApp extends StatelessWidget {
-  const LocationTracerApp({super.key});
+class LocationTrackerApp extends StatelessWidget {
+  const LocationTrackerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      //home: HomeScreen(),
-      home: GpsHomeScreen(),
+    return SafeArea(
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: UserTrackingScreen(),
+      ),
     );
   }
 }

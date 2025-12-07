@@ -13,6 +13,7 @@ class _GpsHomeScreenState extends State<GpsHomeScreen> {
   Position? _currentPosition;
 
   Future<void> _getCurrentLocation() async {
+    print('### call _getCurrentLocation()');
     // // access permission given or not
     // LocationPermission permissionStatus = await Geolocator.checkPermission();
     // if (_isPermissionGranted(permissionStatus)) {
@@ -44,6 +45,7 @@ class _GpsHomeScreenState extends State<GpsHomeScreen> {
   }
 
   Future<void> _listenCurrentLocation() async {
+    print('### call _listenCurrentLocation()');
     // // access permission given or not
     // LocationPermission permissionStatus = await Geolocator.checkPermission();
     // if (_isPermissionGranted(permissionStatus)) {
